@@ -1,4 +1,5 @@
 import lt.shgg.commands.*;
+import lt.shgg.data.User;
 import lt.shgg.network.Request;
 
 import java.io.InputStreamReader;
@@ -34,7 +35,7 @@ public class ClientConsole {
      * @param sender отправитель запросов на сервер
      * @param fileFlag флаг истинный если выполняется команда execute_script и ложный в противном случае
      */
-    public void runApp(InputStreamReader inStream, Sender sender, Boolean fileFlag){
+    public void runApp(InputStreamReader inStream, Sender sender, Boolean fileFlag, User user){
         Scanner in = new Scanner(inStream);
         while (in.hasNextLine()){
             try {
@@ -52,6 +53,7 @@ public class ClientConsole {
 
                 //Построение запроса на сервер
                 var request = new Request();
+                request.setUser(user);
                 request.setCommand(commandMap.get(commandName));
                 if (commandArguments != null)request.setArgs(String.join(" ",  commandArguments));
                 if (List.of("add", "add_if_max", "remove_greater", "remove_lower", "update").contains(commandName)) {
@@ -76,7 +78,7 @@ public class ClientConsole {
                         var output = List.of(response.getResult().split(" "));
                         var filename = output.get(output.size() - 1);
                         var scriptRunner = new ScriptRunner();
-                        scriptRunner.runScript(filename);
+                        scriptRunner.runScript(filename, user);
                     } catch (Exception e) {
                         System.err.println(e.getMessage());
                     }

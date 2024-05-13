@@ -1,0 +1,6 @@
+2024-05-13 20:11:38,711 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-13 20:12:03,762 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@3dd1dc90, ticket= Ticket{id=1, name='r', coordinates=Coordinates{x=5.0, y=6}, creationDate=2024-05-13, price=5, type=VIP, venue=Venue{id=1, name='gt', capacity=56, address=Address{street='aaaaaaaaaaaaaaaaaaa'}}}, args= null
+2024-05-13 20:12:03,767 INFO ServerLogger [main] Отправлен ответ элемент
+Ticket{id=1, name='r', coordinates=Coordinates{x=5.0, y=6}, creationDate=2024-05-13, price=5, type=VIP, venue=Venue{id=1, name='gt', capacity=56, address=Address{street='aaaaaaaaaaaaaaaaaaa'}}}
+добавлен успешно
+2024-05-13 21:19:09,690 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения

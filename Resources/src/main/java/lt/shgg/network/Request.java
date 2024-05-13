@@ -2,6 +2,7 @@ package lt.shgg.network;
 
 import lt.shgg.commands.Command;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
 
 import java.io.Serializable;
 
@@ -13,6 +14,7 @@ public class Request implements Serializable {
     private Command command;
     private Ticket ticket;
     private Object args;
+    private User user;
 
     public void setCommand(Command command) {
         this.command = command;
@@ -26,6 +28,10 @@ public class Request implements Serializable {
         this.args = args;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public Object getArgs() {
         return args;
     }
@@ -36,6 +42,10 @@ public class Request implements Serializable {
 
     public Command getCommand() {
         return command;
+    }
+
+    public User getUser() {
+        return user;
     }
 
     @Override
