@@ -3,12 +3,9 @@ package lt.shgg.app;
 import lt.shgg.commands.Command;
 import lt.shgg.data.*;
 import lt.shgg.network.Response;
-import lt.shgg.parsing.Parser;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * <h1>Класс приемник</h1>
@@ -20,17 +17,11 @@ public class Receiver {
      */
     private final Collection<Ticket> data;
     /**
-     * Имя файла, которое было передано в качестве аргумента при запуске приложения
-     */
-    private final String filename;
-    /**
      * Стандартный конструктор
      * @param data коллекция экземпляров класса {@link Ticket}
-     * @param filename имя файла, которое было передано в качестве аргумента при запуске приложения
      */
-    public Receiver(Storage data, String filename) {
+    public Receiver(Storage data) {
         this.data = data.collection();
-        this.filename = filename;
     }
 
     /**
@@ -58,7 +49,7 @@ public class Receiver {
      * команда save сохраняет коллекцию в файл переданный в качестве аргумента при запуске приложения
      */
     public void save() throws IOException {
-        Parser.saveToFile(new File(this.filename), this.data);
+        //Parser.saveToFile(new File(this.filename), this.data);
         System.out.println("Коллекция сохранена успешно");
     }
 

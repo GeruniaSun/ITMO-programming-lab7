@@ -59,6 +59,22 @@ public class Venue implements Serializable {
      */
     private Venue(){}
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
     /**
      * <h2>Класс описывающий сущность адреса места проведения</h2>
      * адрес - необязательное поля места проведения
@@ -92,6 +108,10 @@ public class Venue implements Serializable {
          * Стандартный конструктор для корректной работы парсера XML
          */
         private Address(){this.street = "костыль";}
+
+        public String getStreet() {
+            return street;
+        }
 
         /**
          * Стандартный метод из класса Object для сравнения объектов

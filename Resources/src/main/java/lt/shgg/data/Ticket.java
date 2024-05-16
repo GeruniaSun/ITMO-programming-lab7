@@ -66,6 +66,8 @@ public class Ticket implements Comparable<Ticket>, Serializable {
     @JacksonXmlProperty
     private Venue venue;
 
+    private String author;
+
     /**
      * Перечисление описывающее типы билетов
      */
@@ -116,6 +118,10 @@ public class Ticket implements Comparable<Ticket>, Serializable {
         return venue;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
     /**
      * Конструктор вызываемый классом строителем {@link lt.shgg.data.TicketBuilder} для создания нового билета
      * @param id значение для поля id
@@ -127,7 +133,7 @@ public class Ticket implements Comparable<Ticket>, Serializable {
      * @param venue значение для поля venue
      */
     public Ticket(Long id, String name, Coordinates coordinates, LocalDate creationDate,
-                  Long price, TicketType type, Venue venue) {
+                  Long price, TicketType type, Venue venue, String author) {
         this.id = id;
         this.name = name;
         this.coordinates = coordinates;
@@ -135,6 +141,7 @@ public class Ticket implements Comparable<Ticket>, Serializable {
         this.price = price;
         this.type = type;
         this.venue = venue;
+        this.author = author;
     }
 
     /**

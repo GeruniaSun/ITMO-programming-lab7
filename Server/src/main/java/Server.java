@@ -49,7 +49,7 @@ public class Server {
                 }
             }
         } catch (IOException e) {
-            serverLogger.error("Произошла ошибка при работе сервера" + e.getMessage());
+            serverLogger.error("Произошла ошибка при работе сервера{}", e.getMessage());
         }
     }
 

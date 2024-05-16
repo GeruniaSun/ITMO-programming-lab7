@@ -3,12 +3,12 @@ package lt.shgg.data;
 import java.time.LocalDate;
 
 /**
- * <h1>Класс строитель для создания экземпляров класса {@link data.Ticket}</h1>
+ * <h1>Класс строитель для создания экземпляров класса {@link lt.shgg.data.Ticket}</h1>
  * о шаблоне строитель можно прочитать в книге Джошуа Блоха "Effective Java"
  */
 public class TicketBuilder {
     /**
-     * Все поля (кроме static nextId) копии полей из класса {@link data.Ticket}, с теми же ограничениями
+     * Все поля (кроме static nextId) копии полей из класса {@link lt.shgg.data.Ticket}, с теми же ограничениями
      */
     private Long id;
     private String name;
@@ -17,6 +17,7 @@ public class TicketBuilder {
     private Long price;
     private Ticket.TicketType type;
     private Venue venue;
+    private String author;
     /**
      * Вспомогательная константа для автоматической генерации значения id
      */
@@ -95,6 +96,10 @@ public class TicketBuilder {
         this.venue = venue;
     }
 
+    public void withAuthor(String author){
+        this.author = author;
+    }
+
     /**
      * Метод для дополнительной проверки, что все обязательные поля не пусты
      * @return истину, если все обязательные поля заданы, ложь в противном случае
@@ -107,11 +112,11 @@ public class TicketBuilder {
     }
 
     /**
-     * Метод создающий новый билет вызывая конструктор в классе {@link data.Ticket}
+     * Метод создающий новый билет вызывая конструктор в классе {@link lt.shgg.data.Ticket}
      * @return новенький и полностью определенный билет
      */
     public Ticket build(){
-        return new Ticket(id, name, coordinates, creationDate, price, type, venue);
+        return new Ticket(id, name, coordinates, creationDate, price, type, venue, author);
     }
 
 }

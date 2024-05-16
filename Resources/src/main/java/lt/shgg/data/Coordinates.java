@@ -47,6 +47,14 @@ public class Coordinates implements Serializable {
         this.y = 1;
     }
 
+    public float getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
     /**
      * Стандартный метод для строкового представления объекта
      * @return строку включающую значения всех полей объекта

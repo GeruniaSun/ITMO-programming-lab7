@@ -1,6 +1,111 @@
-2024-05-13 20:11:38,711 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-13 20:12:03,762 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@3dd1dc90, ticket= Ticket{id=1, name='r', coordinates=Coordinates{x=5.0, y=6}, creationDate=2024-05-13, price=5, type=VIP, venue=Venue{id=1, name='gt', capacity=56, address=Address{street='aaaaaaaaaaaaaaaaaaa'}}}, args= null
-2024-05-13 20:12:03,767 INFO ServerLogger [main] Отправлен ответ элемент
-Ticket{id=1, name='r', coordinates=Coordinates{x=5.0, y=6}, creationDate=2024-05-13, price=5, type=VIP, venue=Venue{id=1, name='gt', capacity=56, address=Address{street='aaaaaaaaaaaaaaaaaaa'}}}
-добавлен успешно
-2024-05-13 21:19:09,690 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 00:01:50,668 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 00:01:50,680 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 00:01:50,684 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
+2024-05-17 00:01:50,684 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 00:08:36,738 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 00:08:36,741 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 00:08:36,755 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
+2024-05-17 00:08:36,755 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 00:09:32,612 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 00:09:32,615 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 00:09:32,618 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
+2024-05-17 00:09:32,618 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 00:10:02,102 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 00:10:02,105 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 00:10:02,109 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
+2024-05-17 00:10:02,109 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 00:13:00,535 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 00:13:00,538 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 00:13:00,541 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
+2024-05-17 00:13:00,541 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 00:16:21,491 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 00:16:21,494 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 00:16:21,497 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
+2024-05-17 00:16:21,497 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:22:27,053 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 01:22:27,062 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:22:27,071 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:22:43,884 INFO ServerLogger [main] Объекты успешно сохранены
+2024-05-17 01:22:58,173 INFO ServerLogger [main] Объекты успешно сохранены
+2024-05-17 01:23:09,296 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 01:23:09,304 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:23:09,311 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:24:01,464 WARN DatabaseLogger [main] Ошибка при подключении к базе данныхorg.postgresql.Driver
+2024-05-17 01:24:01,470 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:24:01,479 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:25:03,784 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 01:25:03,790 INFO DatabaseLogger [main] org.postgresql.Driver
+2024-05-17 01:25:03,791 INFO DatabaseLogger [main] null
+2024-05-17 01:25:03,792 INFO DatabaseLogger [main] class java.lang.ClassNotFoundException
+2024-05-17 01:25:03,792 INFO DatabaseLogger [main] [Ljava.lang.StackTraceElement;@740cae06
+2024-05-17 01:25:03,794 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:25:03,803 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:25:33,386 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 01:25:33,391 INFO DatabaseLogger [main] org.postgresql.Driver
+2024-05-17 01:25:33,392 INFO DatabaseLogger [main] null
+2024-05-17 01:25:33,392 INFO DatabaseLogger [main] class java.lang.ClassNotFoundException
+2024-05-17 01:25:33,396 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:25:33,404 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:26:43,491 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:26:43,505 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:28:09,021 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:28:09,026 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:28:09,027 INFO ParseLogger [main] null
+2024-05-17 01:28:09,028 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:28:09,039 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:32:25,060 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:32:25,065 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:32:25,067 INFO ParseLogger [main] null
+2024-05-17 01:32:25,067 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:32:25,077 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:33:25,140 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:33:25,146 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:33:25,148 INFO ParseLogger [main] null
+2024-05-17 01:33:25,148 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:33:25,158 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:34:10,752 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:34:10,757 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:34:10,759 INFO ParseLogger [main] null
+2024-05-17 01:34:10,759 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:34:10,768 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:34:25,508 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:34:25,513 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:34:25,515 INFO ParseLogger [main] null
+2024-05-17 01:34:25,515 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:34:25,524 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:37:39,404 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 01:37:39,412 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:37:39,413 INFO ParseLogger [main] Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+2024-05-17 01:37:39,415 INFO ParseLogger [main] null
+2024-05-17 01:37:39,415 INFO ParseLogger [main] class java.lang.NullPointerException
+2024-05-17 01:37:39,424 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:37:50,505 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:37:50,509 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:37:50,510 INFO ParseLogger [main] null
+2024-05-17 01:37:50,511 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:37:50,521 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:38:20,241 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
+2024-05-17 01:38:20,247 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:38:20,247 INFO ParseLogger [main] Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
+2024-05-17 01:38:20,249 INFO ParseLogger [main] null
+2024-05-17 01:38:20,249 INFO ParseLogger [main] class java.lang.NullPointerException
+2024-05-17 01:38:20,259 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:38:40,202 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:38:40,206 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:38:40,208 INFO ParseLogger [main] null
+2024-05-17 01:38:40,208 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:38:40,217 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:45:45,586 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-05-17 01:45:45,591 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
+  Позиция: 15
+2024-05-17 01:45:45,592 INFO ParseLogger [main] null
+2024-05-17 01:45:45,592 INFO ParseLogger [main] class org.postgresql.util.PSQLException
+2024-05-17 01:45:45,601 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 01:46:58,506 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
