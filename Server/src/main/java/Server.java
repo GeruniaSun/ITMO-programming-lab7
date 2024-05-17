@@ -69,16 +69,16 @@ public class Server {
              ObjectOutputStream clientWriter = new ObjectOutputStream(clientSocket.socket().getOutputStream())) {
 
             userRequest = (Request) clientReader.readObject();
-            serverLogger.info("Получен запрос " + userRequest);
+            serverLogger.info("Получен запрос {}", userRequest);
             var invoker = new Invoker();
             var responseToUser = invoker.runCommand(userRequest, this.receiver);
             clientWriter.writeObject(responseToUser);
-            serverLogger.info("Отправлен ответ " + responseToUser.getResult());
+            serverLogger.info("Отправлен ответ {}", responseToUser.getResult());
             clientWriter.flush();
         } catch (ClassNotFoundException | InvalidClassException | NotSerializableException e) {
             serverLogger.warn("Произошла ошибка при взаимодействии с клиентом!");
         } catch (IOException exception) {
-            serverLogger.warn("Ошибка ввода вывода " + exception.getMessage());
+            serverLogger.warn("Ошибка ввода вывода {}", exception.getMessage());
         } finally {
             try {
                 clientSocket.close();

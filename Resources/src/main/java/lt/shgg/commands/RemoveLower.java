@@ -2,6 +2,8 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
+import lt.shgg.database.DatabaseManager;
 import lt.shgg.network.Response;
 
 import java.io.Serial;
@@ -22,11 +24,13 @@ public class RemoveLower implements Command, Serializable {
      * логика описана в самом интерфейсе
      */
     @Override
-    public Response execute(Object args, Ticket ticket, Receiver receiver) {
+    public Response execute(Object args, Ticket ticket, Receiver receiver, User user) {
         if (args != null)
             throw new IllegalArgumentException("Команда remove_lower не принимает никаких аргументов, " +
                 "значение element нужно вводить с новой строки");
-        return receiver.removeLower(ticket);
+        var databaseManager = new DatabaseManager();
+        databaseManager.removeLower(user.getLogin(), ticket.getPrice());
+        return receiver.removeLower(ticket, user.getLogin());
     }
 
     @Override

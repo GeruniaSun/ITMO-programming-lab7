@@ -37,6 +37,7 @@ public class ClientConsole {
      */
     public void runApp(InputStreamReader inStream, Sender sender, Boolean fileFlag, User user){
         Scanner in = new Scanner(inStream);
+        System.out.println("Добро пожаловать! Введите help");
         while (in.hasNextLine()){
             try {
                 //Чтение и обработка ввода
@@ -58,8 +59,8 @@ public class ClientConsole {
                 if (commandArguments != null)request.setArgs(String.join(" ",  commandArguments));
                 if (List.of("add", "add_if_max", "remove_greater", "remove_lower", "update").contains(commandName)) {
                     if (fileFlag){
-                        request.setTicket(TicketAppender.appendTicket(in.nextLine()));
-                    } else request.setTicket(TicketAppender.appendTicket());
+                        request.setTicket(TicketAppender.appendTicket(in.nextLine(), user.getLogin()));
+                    } else request.setTicket(TicketAppender.appendTicket(user.getLogin()));
                 }
 
                 //Получение и вывод ответа сервера

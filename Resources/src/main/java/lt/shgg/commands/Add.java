@@ -2,6 +2,8 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
+import lt.shgg.database.DatabaseManager;
 import lt.shgg.network.Response;
 
 import java.io.Serial;
@@ -22,11 +24,19 @@ public class Add implements Command, Serializable {
      * логика описана в самом интерфейсе
      */
     @Override
-    public Response execute(Object args, Ticket ticket, Receiver receiver) {
+    public Response execute(Object args, Ticket ticket, Receiver receiver, User user) {
         if (args != null)
             throw new IllegalArgumentException("Команда add не принимает никаких аргументов, кроме билета");
         if (ticket == null) throw new IllegalArgumentException("Команда add не работает без билета");
-        return receiver.add(ticket);
+        var databaseManager = new DatabaseManager();
+        long id = databaseManager.addObject(ticket);
+        if (id == -1) {
+            return new Response("Не получилось добавить элемент в базу данных");
+        } else {
+            ticket.setId(id);
+            return receiver.add(ticket);
+        }
+
     }
 
     @Override

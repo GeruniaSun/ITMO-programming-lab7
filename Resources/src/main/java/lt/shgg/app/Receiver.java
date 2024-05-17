@@ -2,6 +2,7 @@ package lt.shgg.app;
 
 import lt.shgg.commands.Command;
 import lt.shgg.data.*;
+import lt.shgg.database.DatabaseParser;
 import lt.shgg.network.Response;
 
 import java.io.IOException;
@@ -49,7 +50,8 @@ public class Receiver {
      * команда save сохраняет коллекцию в файл переданный в качестве аргумента при запуске приложения
      */
     public void save() throws IOException {
-        //Parser.saveToFile(new File(this.filename), this.data);
+        var databaseParser = new DatabaseParser();
+        databaseParser.save(this.data);
         System.out.println("Коллекция сохранена успешно");
     }
 
@@ -89,8 +91,9 @@ public class Receiver {
      * Метод соответствующий команде remove_greater<br>
      * команда remove_greater удаляет из коллекции все элементы, большие введенного
      */
-    public Response removeGreater(Ticket ticket){
-        if (data.removeIf(t -> t.compareTo(ticket) > 0)) return new Response("элементы удалены");
+    public Response removeGreater(Ticket ticket, String login){
+        if (data.removeIf(t -> t.compareTo(ticket) > 0 && t.getAuthor().equals(login)))
+            return new Response("элементы удалены");
         else return new Response("коллекция не изменилась");
     }
 
@@ -98,8 +101,9 @@ public class Receiver {
      * Метод соответствующий команде remove_lower<br>
      * команда remove_lower удаляет из коллекции все элементы, меньшие введенного
      */
-    public Response removeLower(Ticket ticket){
-        if (data.removeIf(t -> t.compareTo(ticket) < 0)) return new Response("элементы удалены");
+    public Response removeLower(Ticket ticket, String login){
+        if (data.removeIf(t -> t.compareTo(ticket) < 0 && t.getAuthor().equals(login)))
+            return new Response("элементы удалены");
         else return new Response("коллекция не изменилась");
     }
 
@@ -138,8 +142,8 @@ public class Receiver {
      * Метод соответствующий команде clear<br>
      * команда clear очищает коллекцию
      */
-    public Response clear(){
-        data.clear();
+    public Response clear(String login){
+        data.removeIf(t -> t.getAuthor().equals(login));
         return new Response("Коллекция успешно очищена");
     }
 

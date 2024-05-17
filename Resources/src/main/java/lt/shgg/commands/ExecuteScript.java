@@ -2,6 +2,7 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
 import lt.shgg.network.Response;
 
 import java.io.Serial;
@@ -22,7 +23,7 @@ public class ExecuteScript implements Command, Serializable {
      * логика описана в самом интерфейсе
      */
     @Override
-    public Response execute(Object args, Ticket ticket, Receiver receiver) {
+    public Response execute(Object args, Ticket ticket, Receiver receiver, User user) {
         if (args == null)
             throw new NullPointerException("Команда execute_script не работает без аргумента filename");
         String filename = args.toString();

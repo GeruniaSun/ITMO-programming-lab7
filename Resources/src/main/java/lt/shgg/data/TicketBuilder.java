@@ -108,7 +108,8 @@ public class TicketBuilder {
         return !(this.name == null
                 || this.coordinates == null
                 || this.price == null
-                || this.type == null);
+                || this.type == null
+                || this.author == null);
     }
 
     /**

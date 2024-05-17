@@ -12,7 +12,7 @@ public class TicketAppender {
      * @return введенный пользователем билет
      * @throws IllegalStateException если билет не получилось сделать
      */
-    public static Ticket appendTicket(){
+    public static Ticket appendTicket(String login){
         var builder = new TicketBuilder();
         var in = new Scanner(System.in);
 
@@ -169,6 +169,7 @@ public class TicketAppender {
             builder.withVenue(venueBuilder.build());
         }
 
+        builder.withAuthor(login);
         if (builder.isReadyToBuild()){
             return builder.build();
         } else throw new IllegalStateException("Что-то пошло не так во время описания билета");
@@ -181,7 +182,7 @@ public class TicketAppender {
      * @throws IllegalStateException если билет не получилось сделать
      * @throws IllegalArgumentException если в файле некорректные значения полей билета
      */
-    public static Ticket appendTicket(String args){
+    public static Ticket appendTicket(String args, String login){
         try {
             var builder = new TicketBuilder();
             ArrayList<String> values = new ArrayList<>(List.of(args.substring(1)
@@ -203,6 +204,8 @@ public class TicketAppender {
                             .substring(1).replace("'", "")));
                 builder.withVenue(venueBuilder.build());
             }
+
+            builder.withAuthor(login);
             if (builder.isReadyToBuild()) return builder.build();
             else throw new IllegalArgumentException("что-то не так со значениями полей билета");
         } catch (Exception e){

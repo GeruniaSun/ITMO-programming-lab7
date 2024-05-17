@@ -2,6 +2,8 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
+import lt.shgg.database.DatabaseManager;
 import lt.shgg.network.Response;
 
 import java.io.Serial;
@@ -22,11 +24,20 @@ public class AddIfMax implements Command, Serializable {
      * логика описана в самом интерфейсе
      */
     @Override
-    public Response execute(Object args, Ticket ticket, Receiver receiver) {
+    public Response execute(Object args, Ticket ticket, Receiver receiver, User user) {
         if (args != null) throw new IllegalArgumentException("Команда add_if_max не принимает никаких аргументов, " +
                 "значение element нужно вводить с новой строки");
         if (ticket == null) throw new IllegalArgumentException("Команда add_if_max не работает без билета");
-        return receiver.addIfMax(ticket);
+        var dataBaseManager = new DatabaseManager();
+        long id = dataBaseManager.addIfMax(ticket);
+        if (id == -1) {
+            return new Response("Не удалось выполнить команду");
+        } else if (id == -2) {
+            return new Response("Элемент не добавлен в коллекцию он не такой уж и большой ");
+        } else {
+            ticket.setId(id);
+            return receiver.addIfMax(ticket);
+        }
     }
 
     @Override

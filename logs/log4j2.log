@@ -109,3 +109,47 @@
 2024-05-17 01:45:45,592 INFO ParseLogger [main] class org.postgresql.util.PSQLException
 2024-05-17 01:45:45,601 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
 2024-05-17 01:46:58,506 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 03:33:13,648 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 03:43:00,277 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Exit@6239aba6, ticket= null, args= null
+2024-05-17 03:43:00,278 INFO ServerLogger [main] Отправлен ответ screw you guys, i'm going home
+2024-05-17 03:50:56,826 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Exit@2421cc4, ticket= null, args= null
+2024-05-17 03:50:56,827 INFO ServerLogger [main] Отправлен ответ screw you guys, i'm going home
+2024-05-17 04:29:01,134 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 04:29:42,936 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@15713d56user=lt.shgg.data.User@172857, ticket= Ticket{id=2, name='Krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=2, name='Ledoviy', capacity=123123123, address=Address{street='Saint P.'}}, author=Ann}, args= null
+2024-05-17 04:29:42,999 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
+2024-05-17 04:29:52,591 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@32c726eeuser=lt.shgg.data.User@172857, ticket= null, args= null
+2024-05-17 04:29:52,591 INFO ServerLogger [main] Отправлен ответ Коллекция пуста. Используйте команду add, чтоб добавить элементы
+2024-05-17 04:32:28,782 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@76f4b65user=lt.shgg.data.User@172857, ticket= Ticket{id=3, name='Krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=3, name='Ledoviy', capacity=123123123, address=Address{street='Saint P.'}}, author=Ann}, args= null
+2024-05-17 04:32:28,822 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
+2024-05-17 04:32:51,048 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 04:33:09,175 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@5c44c582user=lt.shgg.data.User@172857, ticket= Ticket{id=4, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=4, type=VIP, venue=Venue{id=4, name='4', capacity=4, address=Address{street='4'}}, author=Ann}, args= null
+2024-05-17 04:33:09,225 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
+2024-05-17 04:34:55,954 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@7ae42ce3user=lt.shgg.data.User@172857, ticket= Ticket{id=5, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}, args= null
+2024-05-17 04:34:55,998 INFO ServerLogger [main] Отправлен ответ элемент
+Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
+добавлен успешно
+2024-05-17 04:35:28,246 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Clear@524f3b3auser=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
+2024-05-17 04:35:28,286 INFO ServerLogger [main] Отправлен ответ Коллекция успешно очищена
+2024-05-17 04:35:31,732 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@7331196buser=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
+2024-05-17 04:35:31,733 INFO ServerLogger [main] Отправлен ответ Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
+
+2024-05-17 04:35:47,906 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.RemoveById@64a40280user=lt.shgg.data.User@81ebe8d3, ticket= null, args= 1
+2024-05-17 04:35:47,947 INFO ServerLogger [main] Отправлен ответ То ли объект не ваш, то ли id такого нет, но ужалить не получается
+2024-05-17 04:43:58,012 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 04:43:58,330 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@5505ae1auser=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=1, name='rer', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=45, type=CHEAP, venue=null, author=Gerunia}, args= null
+2024-05-17 04:43:58,449 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
+2024-05-17 04:46:03,671 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 04:46:45,369 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@4ae9cfc1user=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=1, name='ALBLACK52', coordinates=Coordinates{x=812.0, y=103}, creationDate=2024-05-17, price=999999, type=CHEAP, venue=null, author=Gerunia}, args= null
+2024-05-17 04:46:45,488 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
+2024-05-17 04:47:40,353 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 04:47:49,792 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@6cce16f4user=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=2, name='e', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=4, type=VIP, venue=null, author=Gerunia}, args= null
+2024-05-17 04:47:49,929 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
+2024-05-17 04:50:00,742 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 04:50:11,030 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@363a52fuser=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=3, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=null, author=Gerunia}, args= null
+2024-05-17 04:50:11,172 INFO ServerLogger [main] Отправлен ответ элемент
+Ticket{id=2, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=null, author=Gerunia}
+добавлен успешно
+2024-05-17 04:50:41,051 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@e57b96duser=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=4, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=Venue{id=1, name='r', capacity=4, address=null}, author=Gerunia}, args= null
+2024-05-17 04:50:41,178 INFO ServerLogger [main] Отправлен ответ элемент
+Ticket{id=3, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=Venue{id=1, name='r', capacity=4, address=null}, author=Gerunia}
+добавлен успешно

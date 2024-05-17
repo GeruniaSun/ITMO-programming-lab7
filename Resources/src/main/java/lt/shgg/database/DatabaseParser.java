@@ -78,10 +78,6 @@ public class DatabaseParser {
             }
         } catch (SQLException | NullPointerException e){
             ParseLogger.warn("Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция");
-            ParseLogger.info(e.getMessage());
-            ParseLogger.info(e.getCause());
-            ParseLogger.info(e.getClass());
-            e.printStackTrace();
         }
         return tickets;
     }

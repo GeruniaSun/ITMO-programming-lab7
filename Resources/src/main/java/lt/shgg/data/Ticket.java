@@ -122,6 +122,10 @@ public class Ticket implements Comparable<Ticket>, Serializable {
         return author;
     }
 
+    public void setId(long id){
+        this.id = id;
+    }
+
     /**
      * Конструктор вызываемый классом строителем {@link lt.shgg.data.TicketBuilder} для создания нового билета
      * @param id значение для поля id
@@ -158,6 +162,7 @@ public class Ticket implements Comparable<Ticket>, Serializable {
                 ", price=" + price +
                 ", type=" + type +
                 ", venue=" + venue +
+                ", author=" + author +
                 '}';
     }
 
@@ -173,7 +178,8 @@ public class Ticket implements Comparable<Ticket>, Serializable {
         Ticket other = (Ticket) otherObject;
         return Objects.equals(id, other.id) && Objects.equals(name, other.name)
                 && Objects.equals(coordinates, other.coordinates) && Objects.equals(creationDate, other.creationDate)
-                && Objects.equals(price, other.price) && type == other.type && Objects.equals(venue, other.venue);
+                && Objects.equals(price, other.price) && type == other.type
+                && Objects.equals(venue, other.venue) && Objects.equals(author, other.author);
     }
 
     /**

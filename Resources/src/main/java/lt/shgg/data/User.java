@@ -40,11 +40,12 @@ public class User implements Serializable {
     }
 
     public String getPassword() {
-        if (login.isEmpty()) throw new IllegalArgumentException("Пароль не может быть пустым!");
         return password;
     }
 
     public void setPassword(String password) {
+        if (password.isEmpty()) throw new IllegalArgumentException("Пароль не может быть пустым!");
+        if (password.length() < 4) throw new IllegalArgumentException("Слишком короткий пароль!");
         this.password = password;
     }
 

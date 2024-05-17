@@ -2,6 +2,7 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
 import lt.shgg.network.Response;
 
 /**
@@ -14,7 +15,7 @@ public interface Command {
      * Метод проверяющий аргументы и вызывающий нужный метод приемника {@link Receiver}
      * @param args аргументы переданные в одной строке с командой
      */
-    Response execute(Object args, Ticket ticket, Receiver receiver);
+    Response execute(Object args, Ticket ticket, Receiver receiver, User user);
 
     /**
      * Метод для реализации команды help

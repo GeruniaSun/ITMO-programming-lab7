@@ -1,5 +1,6 @@
 import lt.shgg.app.Receiver;
 import lt.shgg.commands.Command;
+import lt.shgg.data.User;
 import lt.shgg.network.Response;
 import lt.shgg.data.Ticket;
 import lt.shgg.network.Request;
@@ -16,8 +17,9 @@ public class Invoker {
         Command command = request.getCommand();
         Object args = request.getArgs();
         Ticket ticket = request.getTicket();
+        User user = request.getUser();
         try {
-            return command.execute(args, ticket, receiver);
+            return command.execute(args, ticket, receiver, user);
         } catch (Exception e) {
             return new Response("Случилась беда " + e.getMessage());
         }

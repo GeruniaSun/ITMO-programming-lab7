@@ -2,6 +2,7 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
 import lt.shgg.network.Response;
 
 import java.io.Serial;
@@ -23,7 +24,7 @@ public class CountGreaterThanType implements Command, Serializable {
      * логика описана в самом интерфейсе
      */
     @Override
-    public Response execute(Object args, Ticket ticket, Receiver receiver) {
+    public Response execute(Object args, Ticket ticket, Receiver receiver, User user) {
         if (args == null)
             throw new NullPointerException("Команда count_greater_than_type не работает без аргумента type");
         Ticket.TicketType type;

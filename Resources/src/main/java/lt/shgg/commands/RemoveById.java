@@ -2,6 +2,9 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
+import lt.shgg.database.DatabaseManager;
+import lt.shgg.database.DatabaseParser;
 import lt.shgg.network.Response;
 
 import java.io.Serial;
@@ -22,7 +25,7 @@ public class RemoveById implements Command, Serializable {
      * логика описана в самом интерфейсе
      */
     @Override
-    public Response execute(Object args, Ticket ticket, Receiver receiver) {
+    public Response execute(Object args, Ticket ticket, Receiver receiver, User user) {
         if (args == null)
             throw new NullPointerException("Команда remove_by_id не работает без аргумента id");
         long id;
@@ -31,7 +34,9 @@ public class RemoveById implements Command, Serializable {
         } catch (Exception e) {
             throw new IllegalArgumentException("аргумент id должен быть числом");
         }
-        return receiver.removeById(id);
+        var databaseManager = new DatabaseManager();
+        if (databaseManager.removeById(id, user.getLogin())) return receiver.removeById(id);
+        else return new Response("То ли объект не ваш, то ли id такого нет, но ужалить не получается");
     }
 
     @Override

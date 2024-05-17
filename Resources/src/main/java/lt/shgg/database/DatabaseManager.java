@@ -2,7 +2,6 @@ package lt.shgg.database;
 
 import lt.shgg.data.Ticket;
 import lt.shgg.data.User;
-import lt.shgg.network.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,7 +11,7 @@ import java.util.Set;
 
 public class DatabaseManager {
     private final QueryDealer queryDealer = new QueryDealer();
-    private static final Logger DBLogger = LogManager.getLogger("DatabaseLogger");
+    //private static final Logger logManager.getLogger("DatabaseLogger");
 
     public static Connection connect(){
         try{
@@ -20,46 +19,35 @@ public class DatabaseManager {
             return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres",
                     "postgres", "rhbc1995");
         } catch (ClassNotFoundException | SQLException e){
-            DBLogger.warn("Ошибка при подключении к базе данных");
+            System.out.println("Ошибка при подключении к базе данных");
         }
         return null;
     }
-    public Response registration(User user){
+
+    public String findUser(String login){
         try (Connection connection = connect()){
-//            Connection connection = connect();
             PreparedStatement findUser = connection.prepareStatement(queryDealer.findUser);
-            findUser.setString(1, user.getLogin());
+            findUser.setString(1, login);
             ResultSet resultSet = findUser.executeQuery();
             if (resultSet.next()){
-                return new Response("Пользователь с таким логином уже существует. Попробуй еще раз ");
+                return resultSet.getString("password");
             } else {
-                PreparedStatement addUser = connection.prepareStatement(queryDealer.addUser);
-                addUser.setString(1, user.getLogin());
-                addUser.setString(2, PasswordHasher.passwordHash(user.getPassword()));
-                addUser.execute();
-                DBLogger.info("Регистрация нового пользователя: {}", user.getLogin());
-                return new Response("Поздравляю, вы смешарик!");
+                return "";
             }
         } catch (SQLException | NullPointerException e){
-            return new Response("Ошибка подключения к базе данных. Попробуй еще раз ");
+            return "Ошибка подключения к базе данных. Попробуй еще раз ";
         }
     }
 
-    public Response authorisation(User user){
+    public String addUser(User user){
         try (Connection connection = connect()){
-            PreparedStatement findUser = connection.prepareStatement(queryDealer.findUser);
-            findUser.setString(1, user.getLogin());
-            ResultSet resultSet = findUser.executeQuery();
-            if (resultSet.next()){
-                if (PasswordHasher.passwordHash(resultSet.getString("password"))
-                        .equals(PasswordHasher.passwordHash(user.getPassword())))
-                    return new Response("Вход выполнен успешно!");
-                return new Response("Неправильно, попробуй еще раз: ");
-            } else {
-                return new Response("Пользователь с таким логином не найден. Попробуй еще раз ");
-            }
+            PreparedStatement addUser = connection.prepareStatement(queryDealer.addUser);
+            addUser.setString(1, user.getLogin());
+            addUser.setString(2, PasswordHasher.passwordHash(user.getPassword()));
+            addUser.execute();
+            return "Поздравляем с регистрацией!";
         } catch (SQLException | NullPointerException e){
-            return new Response("Ошибка подключения к базе данных. Попробуй еще раз ");
+            return "Ошибка подключения к базе данных. Попробуй еще раз ";
         }
     }
 
@@ -81,19 +69,19 @@ public class DatabaseManager {
             ResultSet resultSet = update.executeQuery();
             return (resultSet.next());
         } catch (SQLException | NullPointerException e){
-            DBLogger.warn("Ошибка при подключении/выполнении запроса");
+            System.out.println("Ошибка при подключении/выполнении запроса");
         }
         return false;
     }
-    public boolean removeObject(int id, String userLogin){
+    public boolean removeById(long id, String userLogin){
         try (Connection connection = connect()){
             PreparedStatement remove = connection.prepareStatement(queryDealer.deleteObject);
             remove.setString(1, userLogin);
-            remove.setInt(2, id);
+            remove.setLong(2, id);
             ResultSet resultSet = remove.executeQuery();
             return resultSet.next();
         } catch (SQLException | NullPointerException e) {
-            DBLogger.warn("Ошибка при подключении/выполнении запроса");
+            System.out.println("Ошибка при подключении/выполнении запроса");
         }
         return false;
     }
@@ -107,16 +95,30 @@ public class DatabaseManager {
             add.setString(4, ticket.getCreationDate().toString());
             add.setLong(5, ticket.getPrice());
             add.setString(6, ticket.getType().toString());
-            add.setLong(7, ticket.getVenue().getId());
-            add.setString(8, ticket.getVenue().getName());
-            add.setInt(9, ticket.getVenue().getCapacity());
-            add.setString(10, ticket.getVenue().getAddress().getStreet());
+            if (ticket.getVenue() != null) {
+                add.setLong(7, ticket.getVenue().getId());
+                add.setString(8, ticket.getVenue().getName());
+                add.setInt(9, ticket.getVenue().getCapacity());
+                if (ticket.getVenue().getAddress() != null){
+                    add.setString(10, ticket.getVenue().getAddress().getStreet());
+                } else {
+                    add.setObject(10, null);
+                }
+            } else {
+                add.setObject(7, null);
+                add.setObject(8, null);
+                add.setObject(9, null);
+                add.setObject(10, null);
+            }
             add.setString(11, ticket.getAuthor());
             ResultSet resultSet = add.executeQuery();
             resultSet.next();
             return resultSet.getLong("id");
         } catch (SQLException | NullPointerException e){
-            DBLogger.warn("Ошибка при подключении/выполнении запроса");
+            System.out.println("Ошибка при подключении/выполнении запроса");
+            System.out.println(e.getMessage());
+            System.out.println(e.getClass());
+            e.printStackTrace();
         }
         return -1;
     }
@@ -131,7 +133,7 @@ public class DatabaseManager {
             }
             return (ticket.getPrice() > maxPrice) ? addObject(ticket) : -2;
         } catch (SQLException | NullPointerException e){
-            DBLogger.warn("Ошибка при подключении/выполнении запроса");
+            System.out.println("Ошибка при подключении/выполнении запроса");
         }
         return -1;
     }
@@ -147,7 +149,7 @@ public class DatabaseManager {
                 ids.add(resultSet.getLong("id"));
             }
         } catch (SQLException | NullPointerException e){
-            DBLogger.warn("Ошибка при подключении/выполнении запроса");
+            System.out.println("Ошибка при подключении/выполнении запроса");
         }
         return ids;
     }
@@ -164,7 +166,7 @@ public class DatabaseManager {
                 ids.add(resultSet.getLong("id"));
             }
         } catch (SQLException | NullPointerException e){
-            DBLogger.warn("Ошибка при подключении/выполнении запроса");
+            System.out.println("Ошибка при подключении/выполнении запроса");
         }
         return ids;
     }
@@ -181,7 +183,7 @@ public class DatabaseManager {
                 ids.add(resultSet.getLong("id"));
             }
         } catch (SQLException | NullPointerException e){
-            DBLogger.warn("Ошибка при подключении/выполнении запроса");
+            System.out.println("Ошибка при подключении/выполнении запроса");
         }
         return ids;
     }

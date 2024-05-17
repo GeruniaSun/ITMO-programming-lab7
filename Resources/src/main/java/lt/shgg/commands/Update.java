@@ -2,6 +2,8 @@ package lt.shgg.commands;
 
 import lt.shgg.app.Receiver;
 import lt.shgg.data.Ticket;
+import lt.shgg.data.User;
+import lt.shgg.database.DatabaseManager;
 import lt.shgg.network.Response;
 
 import java.io.Serial;
@@ -22,7 +24,7 @@ public class Update implements Command, Serializable {
      * логика описана в самом интерфейсе
      */
     @Override
-    public Response execute(Object args, Ticket ticket, Receiver receiver) {
+    public Response execute(Object args, Ticket ticket, Receiver receiver, User user) {
         if (args == null)
             throw new NullPointerException("Команда update не работает без аргумента id");
         long id;
@@ -31,7 +33,12 @@ public class Update implements Command, Serializable {
         } catch (Exception e) {
             throw new IllegalArgumentException("аргумент id должен быть числом");
         }
-        return receiver.update(id, ticket);
+        var dataBaseManager = new DatabaseManager();
+        if (dataBaseManager.updateObject(ticket, user.getLogin()))
+            return receiver.update(id, ticket);
+        else
+            return new Response("Вы не можете изменить этот объект, так как он принадлежит другому пользователю");
+
     }
 
     @Override
