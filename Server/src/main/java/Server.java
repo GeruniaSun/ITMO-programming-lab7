@@ -1,5 +1,7 @@
 import lt.shgg.app.Receiver;
+import lt.shgg.database.DatabaseParser;
 import lt.shgg.network.Request;
+import lt.shgg.network.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -7,6 +9,10 @@ import java.io.*;
 import java.net.*;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
 
 public class Server {
 
@@ -19,6 +25,16 @@ public class Server {
     BufferedInputStream bf = new BufferedInputStream(System.in);
     BufferedReader scanner = new BufferedReader(new InputStreamReader(bf));
     private final Receiver receiver;
+    private final Invoker invoker = new Invoker();
+
+    private final ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+
+    private final ForkJoinPool forkJoinPool = new ForkJoinPool(3);
+
+    private final ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
+
+    private Response response;
+    private  Request request;
 
     public Server(int port, Receiver receiver) {
         this.port = port;
@@ -64,21 +80,23 @@ public class Server {
     }
 
     private void processClientRequest(SocketChannel clientSocket) {
-        Request userRequest;
         try (ObjectInputStream clientReader = new ObjectInputStream(clientSocket.socket().getInputStream());
              ObjectOutputStream clientWriter = new ObjectOutputStream(clientSocket.socket().getOutputStream())) {
 
-            userRequest = (Request) clientReader.readObject();
-            serverLogger.info("Получен запрос {}", userRequest);
-            var invoker = new Invoker();
-            var responseToUser = invoker.runCommand(userRequest, this.receiver);
-            clientWriter.writeObject(responseToUser);
-            serverLogger.info("Отправлен ответ {}", responseToUser.getResult());
-            clientWriter.flush();
-        } catch (ClassNotFoundException | InvalidClassException | NotSerializableException e) {
+            cachedThreadPool.submit(() -> readRequest(clientReader)).get();
+            serverLogger.info("Получен запрос {}", request);
+
+            forkJoinPool.submit(() -> commandExecution(request)).get();
+
+            fixedThreadPool.submit(() -> sendResponse(response, clientWriter)).get();
+            serverLogger.info("Отправлен ответ {}", response.getResult());
+
+        } catch (InvalidClassException | NotSerializableException e) {
             serverLogger.warn("Произошла ошибка при взаимодействии с клиентом!");
         } catch (IOException exception) {
             serverLogger.warn("Ошибка ввода вывода {}", exception.getMessage());
+        } catch (ExecutionException | InterruptedException e) {
+            serverLogger.warn("Ошибка многопоточности {}", e.getMessage());
         } finally {
             try {
                 clientSocket.close();
@@ -87,4 +105,30 @@ public class Server {
             }
         }
     }
+
+    private synchronized void readRequest(ObjectInputStream objectInputStream) {
+        try {
+            request = (Request) objectInputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            serverLogger.warn(e.getMessage());
+        }
+
+
+    }
+
+
+    private Response commandExecution(Request request) {
+        response = invoker.runCommand(request, this.receiver);
+        return response;
+    }
+
+    private synchronized void sendResponse(Response s,  ObjectOutputStream writer) {
+        try {
+            writer.writeObject(s);
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

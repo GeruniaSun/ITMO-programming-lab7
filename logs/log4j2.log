@@ -153,3 +153,27 @@ Ticket{id=2, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05
 2024-05-17 04:50:41,178 INFO ServerLogger [main] Отправлен ответ элемент
 Ticket{id=3, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=Venue{id=1, name='r', capacity=4, address=null}, author=Gerunia}
 добавлен успешно
+2024-05-17 05:27:05,118 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 05:27:16,033 WARN ParseLogger [main] Ошибка при подключении к базе данных. Колекция не сохранена.
+2024-05-17 05:27:16,034 INFO ServerLogger [main] Объекты успешно сохранены
+2024-05-17 05:27:23,538 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-05-17 05:27:45,567 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Help@7582ff54user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
+2024-05-17 05:27:45,577 INFO ServerLogger [main] Отправлен ответ вот список доступных вам команд: help - справка по доступным командам
+info - выводит информацию о коллекции
+show - выводит все элементы коллекции
+add - добавляет элемент в коллекцию
+print_descending - выводит все элементы коллекции в порядке убывания
+filter_by_type type - выводит все элементы коллекции типа type
+count_greater_than_type type - выводит количество элементов коллекции, значение поля type которых больше заданного
+clear - удаляет все элементы из коллекции
+remove_by_id id - удаляет из коллекции элемент с айди id
+remove_greater {element} - удаляет из коллекции все элементы, меньшие, чем заданный
+remove_lower {element} - удаляет из коллекции все элементы, большие, чем заданный
+add_if_max {element} - добавляет элемент в коллекцию, если он превышает максимальный
+update id {element} - обновляет поля элемента по его id
+exit - завершает работу приложения
+execute_script filename - выполняет команды из файла filename
+
+2024-05-17 05:27:48,540 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Info@1869fbd2user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
+2024-05-17 05:27:48,545 INFO ServerLogger [main] Отправлен ответ Тип коллекции: LinkedHashSet
+Размер коллекции: 1
