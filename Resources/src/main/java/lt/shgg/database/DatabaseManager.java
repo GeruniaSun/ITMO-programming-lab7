@@ -16,10 +16,14 @@ public class DatabaseManager {
     public static Connection connect(){
         try{
             Class.forName("org.postgresql.Driver");
+            //return DriverManager.getConnection("jdbc:postgresql://localhost:1311/studs",
+            //        "s409910", "KiGlg8Kcr6U2Or1u");
             return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres",
-                    "postgres", "rhbc1995");
+                                "postgres", "rhbc1995");
         } catch (ClassNotFoundException | SQLException e){
             System.out.println("Ошибка при подключении к базе данных");
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
         return null;
     }

@@ -7,6 +7,9 @@ import lt.shgg.network.Response;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * <h1>Класс приемник</h1>
@@ -17,6 +20,7 @@ public class Receiver {
      * Коллекция, которой манипулирует приложение
      */
     private final Collection<Ticket> data;
+    private final ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
     /**
      * Стандартный конструктор
      * @param data коллекция экземпляров класса {@link Ticket}
@@ -50,9 +54,15 @@ public class Receiver {
      * команда save сохраняет коллекцию в файл переданный в качестве аргумента при запуске приложения
      */
     public void save() throws IOException {
-        var databaseParser = new DatabaseParser();
-        databaseParser.save(this.data);
-        System.out.println("Коллекция сохранена успешно");
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            var databaseParser = new DatabaseParser();
+            databaseParser.save(this.data);
+            System.out.println("Коллекция сохранена успешно");
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /**
@@ -60,11 +70,17 @@ public class Receiver {
      * команда show выводит всю коллекцию
      */
     public Response show(){
-        if (data.isEmpty())
-            return new Response("Коллекция пуста. Используйте команду add, чтоб добавить элементы");
-        var res = new StringBuilder();
-        data.forEach(t -> res.append(t).append("\n"));
-        return new Response(res.toString());
+        Lock readLock = readWriteLock.readLock();
+        try {
+            readLock.lock();
+            if (data.isEmpty())
+                return new Response("Коллекция пуста. Используйте команду add, чтоб добавить элементы");
+            var res = new StringBuilder();
+            data.forEach(t -> res.append(t).append("\n"));
+            return new Response(res.toString());
+        } finally {
+            readLock.unlock();
+        }
     }
 
     /**
@@ -72,8 +88,14 @@ public class Receiver {
      * команда add добавляет новый билет в коллекцию
      */
     public Response add(Ticket ticket){
-        data.add(ticket);
-        return new Response("элемент\n" + ticket + "\nдобавлен успешно");
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            data.add(ticket);
+            return new Response("элемент\n" + ticket + "\nдобавлен успешно");
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /**
@@ -81,10 +103,16 @@ public class Receiver {
      * команда add_if_max добавляет новый билет в коллекцию, если он превосходит максимальный в коллекции
      */
     public Response addIfMax(Ticket ticket){
-        if (ticket.compareTo(Collections.max(data)) > 0) {
-            data.add(ticket);
-            return new Response(" коллекцию добавлен элемент: " + ticket);
-        } else return new Response("элемент не добавлен");
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            if (ticket.compareTo(Collections.max(data)) > 0) {
+                data.add(ticket);
+                return new Response(" коллекцию добавлен элемент: " + ticket);
+            } else return new Response("элемент не добавлен");
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /**
@@ -92,9 +120,15 @@ public class Receiver {
      * команда remove_greater удаляет из коллекции все элементы, большие введенного
      */
     public Response removeGreater(Ticket ticket, String login){
-        if (data.removeIf(t -> t.compareTo(ticket) > 0 && t.getAuthor().equals(login)))
-            return new Response("элементы удалены");
-        else return new Response("коллекция не изменилась");
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            if (data.removeIf(t -> t.compareTo(ticket) > 0 && t.getAuthor().equals(login)))
+                return new Response("элементы удалены");
+            else return new Response("коллекция не изменилась");
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /**
@@ -102,9 +136,15 @@ public class Receiver {
      * команда remove_lower удаляет из коллекции все элементы, меньшие введенного
      */
     public Response removeLower(Ticket ticket, String login){
-        if (data.removeIf(t -> t.compareTo(ticket) < 0 && t.getAuthor().equals(login)))
-            return new Response("элементы удалены");
-        else return new Response("коллекция не изменилась");
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            if (data.removeIf(t -> t.compareTo(ticket) < 0 && t.getAuthor().equals(login)))
+                return new Response("элементы удалены");
+            else return new Response("коллекция не изменилась");
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /**
@@ -112,9 +152,15 @@ public class Receiver {
      * команда print_descending выводит все элементы коллекции в порядке убывания
      */
     public Response printDescending() {
-        var res = new StringBuilder();
-        data.stream().sorted(Comparator.reverseOrder()).forEach(t -> res.append(t).append("\n"));
-        return new Response(res.toString());
+        Lock readLock = readWriteLock.readLock();
+        try {
+            readLock.lock();
+            var res = new StringBuilder();
+            data.stream().sorted(Comparator.reverseOrder()).forEach(t -> res.append(t).append("\n"));
+            return new Response(res.toString());
+        } finally {
+            readLock.unlock();
+        }
     }
 
     /**
@@ -123,9 +169,15 @@ public class Receiver {
      * @param type один из типов {@link Ticket.TicketType}
      */
     public Response filterByType(Ticket.TicketType type){
-        var res = new StringBuilder();
-        data.stream().filter(ticket -> ticket.getType() == type).forEach(t -> res.append(t).append("\n"));
-        return new Response(res.toString());
+        Lock readLock = readWriteLock.readLock();
+        try {
+            readLock.lock();
+            var res = new StringBuilder();
+            data.stream().filter(ticket -> ticket.getType() == type).forEach(t -> res.append(t).append("\n"));
+            return new Response(res.toString());
+        } finally {
+            readLock.unlock();
+        }
     }
 
     /**
@@ -134,8 +186,14 @@ public class Receiver {
      * @param type один из типов {@link Ticket.TicketType}
      */
     public Response countGreaterThanType(Ticket.TicketType type){
-       long counter = data.stream().filter(ticket -> ticket.getType().compareTo(type) > 0).count();
-       return new Response(Long.toString(counter));
+        Lock readLock = readWriteLock.readLock();
+        try {
+            readLock.lock();
+            long counter = data.stream().filter(ticket -> ticket.getType().compareTo(type) > 0).count();
+            return new Response(Long.toString(counter));
+        } finally {
+            readLock.unlock();
+        }
     }
 
     /**
@@ -143,8 +201,14 @@ public class Receiver {
      * команда clear очищает коллекцию
      */
     public Response clear(String login){
-        data.removeIf(t -> t.getAuthor().equals(login));
-        return new Response("Коллекция успешно очищена");
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            data.removeIf(t -> t.getAuthor().equals(login));
+            return new Response("Коллекция успешно очищена");
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /**
@@ -154,9 +218,15 @@ public class Receiver {
      * @param id искомое id
      */
     public Response removeById(Long id){
-        var success = data.removeIf(ticket -> ticket.getId().equals(id));
-        if (success) return new Response("Элемент успешно удалён");
-        else return new Response("В коллекции нет элемента с id " + id);
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            var success = data.removeIf(ticket -> ticket.getId().equals(id));
+            if (success) return new Response("Элемент успешно удалён");
+            else return new Response("В коллекции нет элемента с id " + id);
+        } finally {
+            writeLock.unlock();
+        }
     }
 
     /**
@@ -166,21 +236,27 @@ public class Receiver {
      * @param id искомое id
      */
     public Response update(Long id, Ticket ticket){
-        if (data.stream().noneMatch(t -> t.getId().equals(id)))
-            return new Response("Элемента с таким id не существует");
-        else {
-            var builder = new TicketBuilder();
-            Ticket old = data.stream().filter(t -> t.getId().equals(id)).toList().get(0);
-            builder.withId(old.getId());
-            builder.withCreationDate(old.getCreationDate());
-            builder.withName(ticket.getName());
-            builder.withPrice(ticket.getPrice());
-            builder.withCoordinates(ticket.getCoordinates());
-            builder.withType(ticket.getType());
-            builder.withVenue(ticket.getVenue());
-            data.removeIf(t -> t.getId().equals(id));
-            data.add(builder.build());
-            return new Response("объект обновлен");
+        Lock writeLock = readWriteLock.writeLock();
+        try {
+            writeLock.lock();
+            if (data.stream().noneMatch(t -> t.getId().equals(id)))
+                return new Response("Элемента с таким id не существует");
+            else {
+                var builder = new TicketBuilder();
+                Ticket old = data.stream().filter(t -> t.getId().equals(id)).toList().get(0);
+                builder.withId(old.getId());
+                builder.withCreationDate(old.getCreationDate());
+                builder.withName(ticket.getName());//ПОРА БЫ НЕ ЛЕНИТЬСЯ И ДОБАВИТЬ toBuilder() В БИЛДЕР
+                builder.withPrice(ticket.getPrice());
+                builder.withCoordinates(ticket.getCoordinates());
+                builder.withType(ticket.getType());
+                builder.withVenue(ticket.getVenue());
+                data.removeIf(t -> t.getId().equals(id));
+                data.add(builder.build());
+                return new Response("объект обновлен");
+            }
+        } finally {
+            writeLock.unlock();
         }
     }
 }
