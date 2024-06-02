@@ -1,164 +1,7 @@
-2024-05-17 00:01:50,668 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 00:01:50,680 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 00:01:50,684 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
-2024-05-17 00:01:50,684 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 00:08:36,738 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 00:08:36,741 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 00:08:36,755 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
-2024-05-17 00:08:36,755 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 00:09:32,612 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 00:09:32,615 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 00:09:32,618 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
-2024-05-17 00:09:32,618 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 00:10:02,102 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 00:10:02,105 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 00:10:02,109 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
-2024-05-17 00:10:02,109 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 00:13:00,535 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 00:13:00,538 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 00:13:00,541 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
-2024-05-17 00:13:00,541 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 00:16:21,491 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 00:16:21,494 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 00:16:21,497 WARN ServerLogger [main] Произошла ошибка при попытке использовать порт
-2024-05-17 00:16:21,497 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:22:27,053 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 01:22:27,062 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:22:27,071 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:22:43,884 INFO ServerLogger [main] Объекты успешно сохранены
-2024-05-17 01:22:58,173 INFO ServerLogger [main] Объекты успешно сохранены
-2024-05-17 01:23:09,296 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 01:23:09,304 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:23:09,311 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:24:01,464 WARN DatabaseLogger [main] Ошибка при подключении к базе данныхorg.postgresql.Driver
-2024-05-17 01:24:01,470 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:24:01,479 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:25:03,784 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 01:25:03,790 INFO DatabaseLogger [main] org.postgresql.Driver
-2024-05-17 01:25:03,791 INFO DatabaseLogger [main] null
-2024-05-17 01:25:03,792 INFO DatabaseLogger [main] class java.lang.ClassNotFoundException
-2024-05-17 01:25:03,792 INFO DatabaseLogger [main] [Ljava.lang.StackTraceElement;@740cae06
-2024-05-17 01:25:03,794 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:25:03,803 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:25:33,386 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 01:25:33,391 INFO DatabaseLogger [main] org.postgresql.Driver
-2024-05-17 01:25:33,392 INFO DatabaseLogger [main] null
-2024-05-17 01:25:33,392 INFO DatabaseLogger [main] class java.lang.ClassNotFoundException
-2024-05-17 01:25:33,396 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:25:33,404 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:26:43,491 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:26:43,505 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:28:09,021 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:28:09,026 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:28:09,027 INFO ParseLogger [main] null
-2024-05-17 01:28:09,028 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:28:09,039 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:32:25,060 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:32:25,065 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:32:25,067 INFO ParseLogger [main] null
-2024-05-17 01:32:25,067 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:32:25,077 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:33:25,140 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:33:25,146 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:33:25,148 INFO ParseLogger [main] null
-2024-05-17 01:33:25,148 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:33:25,158 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:34:10,752 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:34:10,757 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:34:10,759 INFO ParseLogger [main] null
-2024-05-17 01:34:10,759 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:34:10,768 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:34:25,508 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:34:25,513 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:34:25,515 INFO ParseLogger [main] null
-2024-05-17 01:34:25,515 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:34:25,524 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:37:39,404 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 01:37:39,412 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:37:39,413 INFO ParseLogger [main] Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
-2024-05-17 01:37:39,415 INFO ParseLogger [main] null
-2024-05-17 01:37:39,415 INFO ParseLogger [main] class java.lang.NullPointerException
-2024-05-17 01:37:39,424 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:37:50,505 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:37:50,509 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:37:50,510 INFO ParseLogger [main] null
-2024-05-17 01:37:50,511 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:37:50,521 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:38:20,241 WARN DatabaseLogger [main] Ошибка при подключении к базе данных
-2024-05-17 01:38:20,247 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:38:20,247 INFO ParseLogger [main] Cannot invoke "java.sql.Connection.prepareStatement(String)" because "this.connection" is null
-2024-05-17 01:38:20,249 INFO ParseLogger [main] null
-2024-05-17 01:38:20,249 INFO ParseLogger [main] class java.lang.NullPointerException
-2024-05-17 01:38:20,259 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:38:40,202 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:38:40,206 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:38:40,208 INFO ParseLogger [main] null
-2024-05-17 01:38:40,208 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:38:40,217 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:45:45,586 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 01:45:45,591 INFO ParseLogger [main] ОШИБКА: отношение "tickets" не существует
-  Позиция: 15
-2024-05-17 01:45:45,592 INFO ParseLogger [main] null
-2024-05-17 01:45:45,592 INFO ParseLogger [main] class org.postgresql.util.PSQLException
-2024-05-17 01:45:45,601 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 01:46:58,506 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 03:33:13,648 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 03:43:00,277 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Exit@6239aba6, ticket= null, args= null
-2024-05-17 03:43:00,278 INFO ServerLogger [main] Отправлен ответ screw you guys, i'm going home
-2024-05-17 03:50:56,826 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Exit@2421cc4, ticket= null, args= null
-2024-05-17 03:50:56,827 INFO ServerLogger [main] Отправлен ответ screw you guys, i'm going home
-2024-05-17 04:29:01,134 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 04:29:42,936 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@15713d56user=lt.shgg.data.User@172857, ticket= Ticket{id=2, name='Krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=2, name='Ledoviy', capacity=123123123, address=Address{street='Saint P.'}}, author=Ann}, args= null
-2024-05-17 04:29:42,999 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
-2024-05-17 04:29:52,591 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@32c726eeuser=lt.shgg.data.User@172857, ticket= null, args= null
-2024-05-17 04:29:52,591 INFO ServerLogger [main] Отправлен ответ Коллекция пуста. Используйте команду add, чтоб добавить элементы
-2024-05-17 04:32:28,782 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@76f4b65user=lt.shgg.data.User@172857, ticket= Ticket{id=3, name='Krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=3, name='Ledoviy', capacity=123123123, address=Address{street='Saint P.'}}, author=Ann}, args= null
-2024-05-17 04:32:28,822 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
-2024-05-17 04:32:51,048 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 04:33:09,175 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@5c44c582user=lt.shgg.data.User@172857, ticket= Ticket{id=4, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=4, type=VIP, venue=Venue{id=4, name='4', capacity=4, address=Address{street='4'}}, author=Ann}, args= null
-2024-05-17 04:33:09,225 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
-2024-05-17 04:34:55,954 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@7ae42ce3user=lt.shgg.data.User@172857, ticket= Ticket{id=5, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}, args= null
-2024-05-17 04:34:55,998 INFO ServerLogger [main] Отправлен ответ элемент
-Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
-добавлен успешно
-2024-05-17 04:35:28,246 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Clear@524f3b3auser=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 04:35:28,286 INFO ServerLogger [main] Отправлен ответ Коллекция успешно очищена
-2024-05-17 04:35:31,732 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@7331196buser=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 04:35:31,733 INFO ServerLogger [main] Отправлен ответ Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
-
-2024-05-17 04:35:47,906 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.RemoveById@64a40280user=lt.shgg.data.User@81ebe8d3, ticket= null, args= 1
-2024-05-17 04:35:47,947 INFO ServerLogger [main] Отправлен ответ То ли объект не ваш, то ли id такого нет, но ужалить не получается
-2024-05-17 04:43:58,012 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 04:43:58,330 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@5505ae1auser=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=1, name='rer', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=45, type=CHEAP, venue=null, author=Gerunia}, args= null
-2024-05-17 04:43:58,449 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
-2024-05-17 04:46:03,671 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 04:46:45,369 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@4ae9cfc1user=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=1, name='ALBLACK52', coordinates=Coordinates{x=812.0, y=103}, creationDate=2024-05-17, price=999999, type=CHEAP, venue=null, author=Gerunia}, args= null
-2024-05-17 04:46:45,488 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
-2024-05-17 04:47:40,353 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 04:47:49,792 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@6cce16f4user=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=2, name='e', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=4, type=VIP, venue=null, author=Gerunia}, args= null
-2024-05-17 04:47:49,929 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
-2024-05-17 04:50:00,742 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 04:50:11,030 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@363a52fuser=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=3, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=null, author=Gerunia}, args= null
-2024-05-17 04:50:11,172 INFO ServerLogger [main] Отправлен ответ элемент
-Ticket{id=2, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=null, author=Gerunia}
-добавлен успешно
-2024-05-17 04:50:41,051 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@e57b96duser=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=4, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=Venue{id=1, name='r', capacity=4, address=null}, author=Gerunia}, args= null
-2024-05-17 04:50:41,178 INFO ServerLogger [main] Отправлен ответ элемент
-Ticket{id=3, name='r', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-05-17, price=5, type=VIP, venue=Venue{id=1, name='r', capacity=4, address=null}, author=Gerunia}
-добавлен успешно
-2024-05-17 05:27:05,118 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 05:27:16,033 WARN ParseLogger [main] Ошибка при подключении к базе данных. Колекция не сохранена.
-2024-05-17 05:27:16,034 INFO ServerLogger [main] Объекты успешно сохранены
-2024-05-17 05:27:23,538 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 05:27:45,567 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Help@7582ff54user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 05:27:45,577 INFO ServerLogger [main] Отправлен ответ вот список доступных вам команд: help - справка по доступным командам
+2024-06-02 21:56:18,945 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
+2024-06-02 21:56:18,992 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-06-02 21:56:48,679 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Help@5a7fe64fuser=lt.shgg.data.User@92a, ticket= null, args= null
+2024-06-02 21:56:48,687 INFO ServerLogger [main] Отправлен ответ вот список доступных вам команд: help - справка по доступным командам
 info - выводит информацию о коллекции
 show - выводит все элементы коллекции
 add - добавляет элемент в коллекцию
@@ -174,30 +17,57 @@ update id {element} - обновляет поля элемента по его i
 exit - завершает работу приложения
 execute_script filename - выполняет команды из файла filename
 
-2024-05-17 05:27:48,540 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Info@1869fbd2user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 05:27:48,545 INFO ServerLogger [main] Отправлен ответ Тип коллекции: LinkedHashSet
-Размер коллекции: 1
-2024-05-17 08:38:52,980 WARN ParseLogger [main] Ошибка при подключении или чтении данных из базы данных. Создана пустая коллекция
-2024-05-17 08:38:52,997 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 08:39:24,106 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 08:39:48,753 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@78641d23user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 08:39:48,787 INFO ServerLogger [main] Отправлен ответ Случилась беда attempt to unlock read lock, not locked by current thread
-2024-05-17 08:46:16,520 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@1046d517user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 08:46:16,522 INFO ServerLogger [main] Отправлен ответ Случилась беда attempt to unlock read lock, not locked by current thread
-2024-05-17 08:46:35,533 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
-2024-05-17 08:46:40,718 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@5c2375a9user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 08:46:40,749 INFO ServerLogger [main] Отправлен ответ Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
+2024-06-02 21:56:53,921 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@798162bcuser=lt.shgg.data.User@92a, ticket= null, args= null
+2024-06-02 21:56:53,923 INFO ServerLogger [main] Отправлен ответ Коллекция пуста. Используйте команду add, чтоб добавить элементы
+2024-06-02 21:57:02,982 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@23941fb4user=lt.shgg.data.User@92a, ticket= Ticket{id=1, name='4', coordinates=Coordinates{x=4.0, y=5}, creationDate=2024-06-02, price=5, type=VIP, venue=null, author=f}, args= null
+2024-06-02 21:57:05,717 INFO ServerLogger [main] Отправлен ответ Не получилось добавить элемент в базу данных
+2024-06-02 21:57:13,109 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@7098b907user=lt.shgg.data.User@92a, ticket= null, args= null
+2024-06-02 21:57:13,111 INFO ServerLogger [main] Отправлен ответ Коллекция пуста. Используйте команду add, чтоб добавить элементы
+2024-06-02 21:57:51,654 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-06-02 21:58:02,235 INFO ParseLogger [main] Коллекция сохранена в базу данных.
+2024-06-02 21:58:02,236 INFO ServerLogger [main] Объекты успешно сохранены
+2024-06-02 21:58:27,974 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Help@60129b9auser=lt.shgg.data.User@44da412, ticket= null, args= null
+2024-06-02 21:58:27,983 INFO ServerLogger [main] Отправлен ответ вот список доступных вам команд: help - справка по доступным командам
+info - выводит информацию о коллекции
+show - выводит все элементы коллекции
+add - добавляет элемент в коллекцию
+print_descending - выводит все элементы коллекции в порядке убывания
+filter_by_type type - выводит все элементы коллекции типа type
+count_greater_than_type type - выводит количество элементов коллекции, значение поля type которых больше заданного
+clear - удаляет все элементы из коллекции
+remove_by_id id - удаляет из коллекции элемент с айди id
+remove_greater {element} - удаляет из коллекции все элементы, меньшие, чем заданный
+remove_lower {element} - удаляет из коллекции все элементы, большие, чем заданный
+add_if_max {element} - добавляет элемент в коллекцию, если он превышает максимальный
+update id {element} - обновляет поля элемента по его id
+exit - завершает работу приложения
+execute_script filename - выполняет команды из файла filename
 
-2024-05-17 08:46:57,814 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.PrintDescending@6c2c1385user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 08:46:57,855 INFO ServerLogger [main] Отправлен ответ Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
+2024-06-02 21:58:33,248 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@5f354bcfuser=lt.shgg.data.User@44da412, ticket= null, args= null
+2024-06-02 21:58:33,274 INFO ServerLogger [main] Отправлен ответ Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
 
-2024-05-17 08:50:48,868 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Add@78641d23user=lt.shgg.data.User@81ebe8d3, ticket= Ticket{id=1, name='Ksany', coordinates=Coordinates{x=812.0, y=103}, creationDate=2024-05-17, price=12, type=USUAL, venue=Venue{id=1, name='SouthWest', capacity=345, address=null}, author=Gerunia}, args= null
-2024-05-17 08:50:48,989 INFO ServerLogger [main] Отправлен ответ элемент
-Ticket{id=4, name='Ksany', coordinates=Coordinates{x=812.0, y=103}, creationDate=2024-05-17, price=12, type=USUAL, venue=Venue{id=1, name='SouthWest', capacity=345, address=null}, author=Gerunia}
-добавлен успешно
-2024-05-17 08:50:52,911 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@146dfe6user=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 08:50:52,913 INFO ServerLogger [main] Отправлен ответ Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
-Ticket{id=4, name='Ksany', coordinates=Coordinates{x=812.0, y=103}, creationDate=2024-05-17, price=12, type=USUAL, venue=Venue{id=1, name='SouthWest', capacity=345, address=null}, author=Gerunia}
+2024-06-02 21:58:44,886 INFO ParseLogger [main] Коллекция сохранена в базу данных.
+2024-06-02 21:58:44,887 INFO ServerLogger [main] Объекты успешно сохранены
+2024-06-02 22:08:31,997 INFO ServerLogger [main] Добро пожаловать на сервер шизофрения
+2024-06-02 22:08:53,630 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Help@67d18ed7user=lt.shgg.data.User@12820, ticket= null, args= null
+2024-06-02 22:08:53,637 INFO ServerLogger [main] Отправлен ответ вот список доступных вам команд: help - справка по доступным командам
+info - выводит информацию о коллекции
+show - выводит все элементы коллекции
+add - добавляет элемент в коллекцию
+print_descending - выводит все элементы коллекции в порядке убывания
+filter_by_type type - выводит все элементы коллекции типа type
+count_greater_than_type type - выводит количество элементов коллекции, значение поля type которых больше заданного
+clear - удаляет все элементы из коллекции
+remove_by_id id - удаляет из коллекции элемент с айди id
+remove_greater {element} - удаляет из коллекции все элементы, меньшие, чем заданный
+remove_lower {element} - удаляет из коллекции все элементы, большие, чем заданный
+add_if_max {element} - добавляет элемент в коллекцию, если он превышает максимальный
+update id {element} - обновляет поля элемента по его id
+exit - завершает работу приложения
+execute_script filename - выполняет команды из файла filename
 
-2024-05-17 08:50:56,603 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Exit@1fc32e4fuser=lt.shgg.data.User@81ebe8d3, ticket= null, args= null
-2024-05-17 08:50:56,604 INFO ServerLogger [main] Отправлен ответ screw you guys, i'm going home
+2024-06-02 22:08:57,094 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Show@7c8c9a05user=lt.shgg.data.User@12820, ticket= null, args= null
+2024-06-02 22:08:57,121 INFO ServerLogger [main] Отправлен ответ Ticket{id=1, name='krid', coordinates=Coordinates{x=123.0, y=123}, creationDate=2024-05-17, price=123123, type=VIP, venue=Venue{id=5, name='Ledoviy', capacity=123123123, address=Address{street='saint p.'}}, author=Ann}
+
+2024-06-02 22:09:00,672 INFO ServerLogger [main] Получен запрос Request: command= lt.shgg.commands.Exit@5c2375a9user=lt.shgg.data.User@12820, ticket= null, args= null
+2024-06-02 22:09:00,673 INFO ServerLogger [main] Отправлен ответ screw you guys, i'm going home

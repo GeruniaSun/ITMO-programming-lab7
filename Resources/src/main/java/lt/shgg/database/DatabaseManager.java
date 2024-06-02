@@ -5,25 +5,37 @@ import lt.shgg.data.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.sql.*;
 import java.util.LinkedHashSet;
+import java.util.Properties;
 import java.util.Set;
 
 public class DatabaseManager {
     private final QueryDealer queryDealer = new QueryDealer();
     //private static final Logger logManager.getLogger("DatabaseLogger");
-
+    private final static String propPath = "Resources/src/main/resources/db_local.properties";
     public static Connection connect(){
         try{
             Class.forName("org.postgresql.Driver");
-            //return DriverManager.getConnection("jdbc:postgresql://localhost:1311/studs",
-            //        "s409910", "KiGlg8Kcr6U2Or1u");
-            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres",
-                                "postgres", "rhbc1995");
+            Properties properties = new Properties();
+            properties.load(new FileInputStream(propPath));
+            return DriverManager.getConnection(
+                    properties.getProperty("address"),
+                    properties.getProperty("username"),
+                    properties.getProperty("password"));
         } catch (ClassNotFoundException | SQLException e){
             System.out.println("Ошибка при подключении к базе данных");
             System.out.println(e.getMessage());
-            e.printStackTrace();
+            //e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("Не найден файл конфигурации, программист петух");
+            System.out.println(e.getMessage());
+            System.out.println(e.getStackTrace());
+            throw new RuntimeException(e);
         }
         return null;
     }
