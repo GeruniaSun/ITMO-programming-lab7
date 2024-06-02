@@ -33,8 +33,6 @@ public class DatabaseManager {
             //e.printStackTrace();
         } catch (IOException e) {
             System.out.println("Не найден файл конфигурации, программист петух");
-            System.out.println(e.getMessage());
-            System.out.println(e.getStackTrace());
             throw new RuntimeException(e);
         }
         return null;
